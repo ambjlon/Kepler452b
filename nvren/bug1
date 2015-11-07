@@ -1,0 +1,7 @@
+bug1:
+使用tag[0].findAll( "h1" )在http://www.nurenb.com/zhongyiys/548.html里面匹配title  <h1>中医针灸减肥有效吗<h1>时报错
+beautifulsoup AttributeError: 'NoneType' object has no attribute 'next_element'
+具体是在bs的element.py中发生的.
+
+google这个错误, 发现这是bs的一个bug, 我使用的是4.4.0版本, 换成4.0.5版本后这个错误消失了.
+参考 https://bugs.launchpad.net/beautifulsoup/+bug/1270611
